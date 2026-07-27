@@ -2,6 +2,9 @@
 ![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart)
 ![Firebase](https://img.shields.io/badge/Firebase-Cloud_Firestore-FFCA28?logo=firebase)
 ![License](https://img.shields.io/badge/license-MIT-green)
+<p align="center">
+<img src="assets/logo.png" width="180">
+</p>
 # 💰 Nery Financer
 
 O **Nery Financer** é um aplicativo de controle financeiro desenvolvido em Flutter com Firebase.
