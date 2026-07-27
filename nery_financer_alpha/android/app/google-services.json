@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1041778256888",
+    "project_id": "neryfinancer",
+    "storage_bucket": "neryfinancer.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041778256888:android:f59ca6f553432403aa440d",
+        "android_client_info": {
+          "package_name": "com.example.nery_financer_alpha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-FG0m6ZxMa4xHhWPBdoG32oMReYmqLaM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
