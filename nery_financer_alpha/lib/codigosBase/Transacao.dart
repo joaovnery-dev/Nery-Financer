@@ -38,11 +38,28 @@ class Transacao {
   }
 
   factory Transacao.fromMap(Map<String, dynamic> map, String id) {
+    DateTime parseData(dynamic value) {
+      if (value is Timestamp) {
+        return value.toDate();
+      }
+      if (value is DateTime) {
+        return value;
+      }
+      if (value is String) {
+        try {
+          return DateTime.parse(value);
+        } catch (_) {
+          return DateTime.now();
+        }
+      }
+      return DateTime.now();
+    }
+
     return Transacao(
       id: id,
-      valor: map['valor'] ?? 0,
-      titulo: map['titulo'] ?? '',
-      descricao: map['descricao'] ?? '',
+      valor: (map['valor'] as num?)?.toDouble() ?? 0.0,
+      titulo: map['titulo']?.toString() ?? '',
+      descricao: map['descricao']?.toString() ?? '',
       categoria: Categoria.values.firstWhere(
         (e) => e.name == map['categoria'],
         orElse: () => Categoria.outro,
@@ -51,7 +68,7 @@ class Transacao {
         (e) => e.name == map['tipo'],
         orElse: () => Tipo.despesa,
       ),
-      data: (map['data'] as Timestamp).toDate() ?? DateTime.now(),
+      data: parseData(map['data']),
     );
   }
 }

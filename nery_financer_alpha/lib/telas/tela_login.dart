@@ -46,7 +46,7 @@ class _TelaLoginState extends State<TelaLogin> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               // Ícone maior e com destaque
-              const Text("💳", style: TextStyle(fontSize: 60)),
+              Image.asset("assets/logo.png", width: 120),
 
               const SizedBox(height: 30),
 

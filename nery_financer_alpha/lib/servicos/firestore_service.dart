@@ -38,12 +38,14 @@ class FirestoreService {
         .collection('usuarios')
         .doc(userId)
         .collection('transacoes')
-        .orderBy('data', descending: true)
         .snapshots()
         .map((query) {
-          return query.docs.map((doc) {
+          final transacoes = query.docs.map((doc) {
             return Transacao.fromMap(doc.data(), doc.id);
           }).toList();
+
+          transacoes.sort((a, b) => b.data.compareTo(a.data));
+          return transacoes;
         });
   }
 
